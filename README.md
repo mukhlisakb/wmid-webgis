@@ -13,20 +13,17 @@ You can find the GitHub repository for this project [here](https://github.com/mu
 
 ### How to Access the GitHub Repository
 ---
-
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/mukhlisakb/wmid-webgis.git 
+git clone https://github.com/mukhlisakb/wmid-webgis.git 
   
-
 2. **Navigate to the Project Directory**:
     ```bash
-    cd wmid-webgis
+cd wmid-webgis
     
-
 3. **Install Dependencies**:
     ```bash
-    npm install
+npm install
     
 
 ## Collaboration
@@ -38,13 +35,13 @@ Click the 'Fork' button on the top right of the repository page to create a copy
 
 2. **Clone Your Fork**:
     ```bash
-    git clone https://github.com/<your-username>/wmid-webgis.git
+git clone https://github.com/<your-username>/wmid-webgis.git
     
 Replace <your-username> with your GitHub username.
 
 3. **Create a New Branch**:
     ```bash
-    git checkout -b your-branch-name
+git checkout -b your-branch-name
     
 Replace your-branch-name with a descriptive name for your branch.
 
@@ -53,7 +50,7 @@ Make the necessary changes and commit them with a meaningful message.
 
 5. **Push to Your Branch**:
     ```bash
-    git push origin your-branch-name
+git push origin your-branch-name
 
 6. **Create a Pull Request**:
 Go to the original repository and click the 'New Pull Request' button. Provide a description of your changes and submit the pull request for review.
