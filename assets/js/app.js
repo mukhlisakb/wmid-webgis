@@ -77,6 +77,30 @@ function clearHighlight() {
   highlight.clearLayers();
 }
 
+//email send
+function sendMail() {
+	var params = (
+		firstname: document.getElementById("first-name").value,
+		lastname: document.getElementById("last-name").value,
+		email: document.getElementById("email").value,
+		message: document.getElementById("message").value,
+	);
+
+const serviceID = "service_efzvvyi"
+const templateID = "template_qf1hvap"
+
+emailjs.send(serviceID,templateID,params).then
+	res => {
+		document.getElementById("first-name").value = "";
+		document.getElementById("last-name").value = "";
+		document.getElementById("email").value = "";
+		document.getElementById("message").value = "";
+		console.log(res);
+		alert("your message sent succesfully");
+}
+.catch(err => console.log(err);
+
+}
 function sidebarClick(id) {
   var layer = markerClusters.getLayer(id);
   map.setView([layer.getLatLng().lat, layer.getLatLng().lng], 17);
@@ -325,6 +349,7 @@ var museums = L.geoJson(null, {
 });
 $.getJSON("data/Museum_new.geojson", function (data) {
   museums.addData(data);
+  map.addLayer(museumLayer);
 });
 
 /* Empty layer placeholder to add to layer control for listening when to add/remove perpus to markerClusters layer */
@@ -367,6 +392,7 @@ var perpus = L.geoJson(null, {
 });
 $.getJSON("data/Perpustakaan_new.geojson", function (data) {
   perpus.addData(data);
+  map.addLayer(perpusLayer);
 });
 
 /* Empty layer placeholder to add to layer control for listening when to add/remove archive to markerClusters layer */
@@ -409,6 +435,7 @@ var archive = L.geoJson(null, {
 });
 $.getJSON("data/Archives_new.geojson", function (data) {
   archive.addData(data);
+  map.addLayer(archiveLayer);
 });
 
 map = L.map("map", {
